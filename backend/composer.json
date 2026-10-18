@@ -1,0 +1,17 @@
+{
+    "name": "win10/paec_huellitas",
+    "authors": [
+        {
+            "name": "Gutierrez-Jostin",
+            "email": "elenamarquez2000casilla@gmail.com"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "2.1"
+    },
+    "config": {
+        "audit": {
+            "block-insecure": false
+        }
+    }
+}
