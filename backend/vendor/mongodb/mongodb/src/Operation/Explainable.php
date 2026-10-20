@@ -1,32 +1,2 @@
-<?php
-/*
- * Copyright 2018-present MongoDB, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-namespace MongoDB\Operation;
-
-/**
- * Explainable interface for explainable operations (aggregate, count, distinct,
- * find, findAndModify, delete, and update).
- *
- * @internal
- */
-interface Explainable
-{
-    /**
-     * Returns the command document for this operation.
-     */
-    public function getCommandDocument(): array;
-}
+µócµûJµý!µÿ ¶_¶,¶¶þ¶­¶	¶	œ¶„¶Ö¶Å¶ê¶<¶Æ¶È¶¶Ó¶#=¶#ø¶%Ó¶*3¶*K¶+ª¶-¶-Ô¶/T¶2‡¶3¶3E¶3 ¶4Q¶6`¶<[¶A#¶D'¶KÂ¶N£¶Ob¶PZ¶P¨¶Q(¶V‰¶Yµ¶cq¶cƒ¶l1¶o+¶o¨¶r)¶v–¶x©¶z	¶~Ô¶
+¶€G¶q¶ƒŒ¶ˆ©¶Žâ¶O¶’à¶“ò¶—¶¶™‡¶šæ¶£¶¨¶¨”¶ª˜¶¬ª¶°¶»ß¶¿[¶Áw¶ÃÃ¶Ô¶Õf¶Øà¶Ù)¶â1¶âh¶æL¶æR¶ïÓ¶ðõ¶ó®¶õº¶÷¶ùð¶ú@·T·ˆ·â·+·Ô·X·&·‡·"*·(q·)[·+Æ·.B·.·2§·3·5Ý·8·:ì·@+·@I·BÈ·E·N	·O†·P·R9·X]·X®·[«·\v·^·jß·l¦·m¸·mÍ·x}·1·†·†²·ˆ‰·‰¶·e· Ý·¢8·¢ü·£·¤M·¨¹·±æ·µT·¹·¼˜·¾ð·¿·¿L·ÁD·Èã·ÊV·Ë#·ÏF·Ï“·ÑV·Õå·Ö·×ö·Üê·ÞÑ·ã·å‚·í¸…¸O¸r¸—¸Â¸i¸Ø¸ *¸ ¸!’¸!¬¸"<¸&I¸&¸*ˆ¸+É¸1-¸4†¸9¸@³¸Dú¸J´¸Pf¸V¸[®¸cT¸e¸l¸lž¸q¸vÃ¸wP¸|¶¸)¸‚F¸ƒ¸…Ï¸‡Z¸‡¸ŽÉ¸’2¸’Ú¸“¸–\¸–¾¸˜­¸›¸›¡¸ B¸ j¸¡|¸¢(¸¢–¸§P¸«Ó¸¯¸³ø¸µÓ¸¶—¸»¡¸»Ó¸ÀÍ¸Â¸Â_¸Ã¤¸ÅÐ¸ÉÝ¸Ê½¸ÌÒ¸ÍJ¸Ïž¸Öi¸Û®¸Þ¢¸à¸âª¸âÚ¸äÄ¸

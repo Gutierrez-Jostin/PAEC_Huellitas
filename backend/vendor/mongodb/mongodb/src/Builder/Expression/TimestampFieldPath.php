@@ -1,29 +1,2 @@
-<?php
-
-/**
- * THIS FILE IS AUTO-GENERATED. ANY CHANGES WILL BE LOST!
- */
-
-declare(strict_types=1);
-
-namespace MongoDB\Builder\Expression;
-
-use MongoDB\Builder\Type\FieldPathInterface;
-use MongoDB\Exception\InvalidArgumentException;
-
-use function sprintf;
-use function str_starts_with;
-
-class TimestampFieldPath implements FieldPathInterface, ResolvesToTimestamp
-{
-    public readonly string $name;
-
-    public function __construct(string $name)
-    {
-        if (str_starts_with($name, '$')) {
-            throw new InvalidArgumentException(sprintf('Name cannot start with a dollar sign: "%s"', $name));
-        }
-
-        $this->name = $name;
-    }
-}
+е_├Qе_╩yе_╦3е_╬Cе_╘┐е_╪╡е_▐Яе_рме_у▓е_ч<е_щ[е_щdе_щ╥е_ыюе_ю╬е_я3е_яЁе_ё,е_ўЎе_·nе_¤╔е_■Ие`ъе`█е`"█е`'+е`'▀е`*Nе`7Gе`=-е`>#е`A╩е`BШе`M╞е`Q╦е`RМе`Sпе`X┬е`Y4е`Zе`dе`d!е`h┴е`lyе`ще`Аyе`Б╢е`Дqе`Еcе`Зе`И.е`Иnе`Мtе`Сье`Шlе`Щ^е`Ыfе`дmе`йMе`л√е`о.е`╡sе`╖е`╣єе`├е`─е`─Zе`╔jе`╔Бе`╩е`╦lе`╠	е`╙`е`▌sе`▐(е`фєе`х█е`щёе`ь&е`ЁЇе`Ў{е`°е`°Ее`■Mеa+еaНеaОеaШеa	Оеa
+Єеa8еa│еaWеaГеa ~еa!Йеa&Ыеa.реa/щеa1йеa3 еa5деa5┘еa9┼еa;│еa=.еa@]еaF╜еaP,еaQуеaTБеaV░еaWэеaXеa_!еaa╬еae~еaf/еajWеamQеan╣еaodеaqиеauпеawtеax>еaЗ0еaЙцеaМОеaР┼еaФeеaХRеaЦеaЧ*еaЪАеaвЕеaз╤еaй╗еaнЇеaоеaпЁеa░беa▓еa╢oеa╖Щеa╣Цеa└.еa┴еa╩╥еa╠█еa╠хеa═Цеa╧tеa╨█еa╙Леa╫+еa╫2еa╫ъеa╪Xеa┌еa█зеaреaт8еaтоеaу!еaф3еaч╩еaш▌еaщеaю▐е

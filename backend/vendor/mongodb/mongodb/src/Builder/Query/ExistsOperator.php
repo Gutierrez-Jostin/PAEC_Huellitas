@@ -1,37 +1,1 @@
-<?php
-
-/**
- * THIS FILE IS AUTO-GENERATED. ANY CHANGES WILL BE LOST!
- */
-
-declare(strict_types=1);
-
-namespace MongoDB\Builder\Query;
-
-use MongoDB\Builder\Type\Encode;
-use MongoDB\Builder\Type\FieldQueryInterface;
-use MongoDB\Builder\Type\OperatorInterface;
-
-/**
- * Matches documents that have the specified field.
- *
- * @see https://www.mongodb.com/docs/manual/reference/operator/query/exists/
- * @internal
- */
-final class ExistsOperator implements FieldQueryInterface, OperatorInterface
-{
-    public const ENCODE = Encode::Single;
-    public const NAME = '$exists';
-    public const PROPERTIES = ['exists' => 'exists'];
-
-    /** @var bool $exists */
-    public readonly bool $exists;
-
-    /**
-     * @param bool $exists
-     */
-    public function __construct(bool $exists = true)
-    {
-        $this->exists = $exists;
-    }
-}
+§€¬§€ð§€@§€Û§€À§€)€§€,/§€.Ÿ§€.Ñ§€/§€0§€1™§€3ž§€6§§€:§€<7§€<à§€?W§€?§€@§€AÃ§€F›§€Hx§€H¢§€T—§€X2§€Yý§€]Â§€a7§€b}§€i§€o‚§€o§€pð§€qÈ§€u*§€x•§€xò§€~3§€~¤§€j§€†6§€ˆ‹§€’Ê§€–§€—ú§€š¶§€œø§€¡ú§€¢ò§€±§€±Õ§€´C§€¶ô§€·æ§€¿Å§€À“§€ÀÝ§€ÂÌ§€ÄR§€Æ¨§€Èf§€ÈØ§€Ê§€Í2§€Ñ§€Ñ}§€ÓX§€Ø§€ÞI§€â§€åb§€æz§€ív§€í•§€õÒ§€ö§€öt§€÷=§€ø§€ý?§€þï§ë§`§…§»§¦§6§=§§ {§(Å§*§*t§.§2¹§6¶§9Q§;º§>¶§AÆ§V§\@§_§_ã§a5§eR§g?§m§nf§{a§C§€~§(§‚§… §†>§‰”§Œ~§Ž§€§ò§‘g§‘þ§’D§’ê§”³§§™§Ÿt§¢©§£§¨4§ª§°§²§·T§º§½è§À§ÁÀ§Ã§È¶§É<§Ôà§Ý*§áŒ§è§ép§é®§éý§ë§íø§ó¾§ô"§÷‚§ú§út§þ'§‚x§‚	È§‚¼§‚§‚Ý§‚'º§‚*#§‚.6§‚04§‚0Þ§‚1E§‚2¶§‚7}§‚8ç§‚9…§‚:r§‚;§‚>/§‚?{§‚VÉ§‚VÔ§‚X™§‚_§§‚a;§‚l³§‚mÐ§‚nâ§‚pH§‚r§‚w§‚z_§‚|§‚~Š§‚²§‚€¯§‚„]§‚…V§‚b§‚r§‚´§‚–&§‚—Ø§‚˜ü§‚™¹§‚¨±§‚­»§‚³ú§‚¿©§‚Æ.§‚Ë—§‚ÎI§‚Ó’§‚×ü§‚Øj§‚é§‚ê1§‚ë¦§‚

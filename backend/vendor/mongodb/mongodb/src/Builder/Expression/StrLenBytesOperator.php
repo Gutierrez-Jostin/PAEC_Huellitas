@@ -1,36 +1,3 @@
-<?php
-
-/**
- * THIS FILE IS AUTO-GENERATED. ANY CHANGES WILL BE LOST!
- */
-
-declare(strict_types=1);
-
-namespace MongoDB\Builder\Expression;
-
-use MongoDB\Builder\Type\Encode;
-use MongoDB\Builder\Type\OperatorInterface;
-
-/**
- * Returns the number of UTF-8 encoded bytes in a string.
- *
- * @see https://www.mongodb.com/docs/manual/reference/operator/aggregation/strLenBytes/
- * @internal
- */
-final class StrLenBytesOperator implements ResolvesToInt, OperatorInterface
-{
-    public const ENCODE = Encode::Single;
-    public const NAME = '$strLenBytes';
-    public const PROPERTIES = ['expression' => 'expression'];
-
-    /** @var ResolvesToString|string $expression */
-    public readonly ResolvesToString|string $expression;
-
-    /**
-     * @param ResolvesToString|string $expression
-     */
-    public function __construct(ResolvesToString|string $expression)
-    {
-        $this->expression = $expression;
-    }
-}
+¤½—P¤½˜;¤½›³¤½ ¤½£’¤½¥¤½¨Ç¤½¨ö¤½®Ç¤½¸à¤½º8¤½Æ_¤½ËM¤½ÍE¤½ÐS¤½Ð ¤½Ò¤½Ö¤½Ö*¤½Þ'¤½áô¤½äÌ¤½è
+¤½è¤½ë}¤½ìZ¤½ïm¤½ðO¤½ðc¤½ò¤½óV¤½ô‘¤½õ‘¤½öÙ¤½ø¤½ù|¤¾º¤¾ô¤¾ë¤¾¤¾ ¤¾t¤¾""¤¾#Ë¤¾%†¤¾&Ç¤¾(‘¤¾+Æ¤¾,¤¾2”¤¾5¹¤¾8]¤¾;«¤¾<Á¤¾<Ì¤¾>#¤¾GÕ¤¾J¦¤¾L„¤¾OV¤¾O‰¤¾Rò¤¾W^¤¾b¤¾c9¤¾pb¤¾z;¤¾{T¤¾{Õ¤¾}¤¾€y¤¾‚W¤¾„Ý¤¾‡õ¤¾ˆc¤¾]¤¾–Ã¤¾¥Z¤¾§¤¾¨Z¤¾¨±¤¾¯l¤¾±»¤¾³¦¤¾·;¤¾»¤¾Ç¡¤¾Éa¤¾Ê¤¾Ìï¤¾ÏN¤¾Ô÷¤¾×—¤¾Ø†¤¾ÛÀ¤¾à¤¾ë7¤¾ìŒ¤¾ñ¤¾ñ]¤¾ó$¤¾ôæ¤¾õu¤¾÷­¤¾ý¶¤¾ýû¤¿¤¿å¤¿
+¤¿¤¿ ¤¿¤¿ ¤¿¤¿O¤¿!(¤¿#d¤¿%î¤¿'÷¤¿)¤¿*‚¤¿6¤¿8ñ¤¿:¦¤¿<Ò¤¿>¼¤¿?J¤¿EA¤¿EŠ¤¿I~¤¿JL¤¿Ju¤¿N¤¿Tû¤¿ZÚ¤¿^˜¤¿`A¤¿b>¤¿cË¤¿có¤¿eË¤¿fK¤¿pX¤¿r¤¿r'¤¿sÆ¤¿sâ¤¿uÖ¤¿v^¤¿vø¤¿{=¤¿~ÿ¤¿…×¤¿†-¤¿ˆH¤¿‰P¤¿‹Ñ¤¿Œ¤¿‘0¤¿‘x¤¿•}¤¿™ì¤¿¢ƒ¤¿¦/¤¿¦ö¤¿ªN¤¿º|¤¿½Ë¤¿À¯¤¿Æ8¤¿Ç¥¤¿Ê¤¿Ê&¤¿Ê‰¤¿Ì¾¤¿Í¤¿ÍÂ¤¿Ñ>¤¿ÔM¤¿Õ¤¿Ú—¤¿Üô¤¿Ý_¤¿å^¤¿æQ¤¿ç¥¤¿èŒ¤¿í¿¤¿ñ˜¤¿ó”¤¿ôK¤¿ù¤¿üÈ¤¿ý#¤¿ÿŒ¤À¤À	U¤À	þ¤À¶¤À¤Àí¤Ài¤À¤Àš¤À$9¤À$ë¤À+»¤À.B¤À8e¤À9Þ¤À9ä¤À:Õ¤À<¾¤ÀAÖ¤ÀCÓ¤ÀDA¤ÀDÊ¤ÀPt¤ÀU{¤ÀYˆ¤ÀYÈ¤À\™¤Àe¢¤Àf&¤Àiî¤ÀjÄ¤Àk¤Àwû¤Àx¤Àxe¤Ày‚¤ÀzÍ¤À{¢¤À~€¤À~š¤À¤À

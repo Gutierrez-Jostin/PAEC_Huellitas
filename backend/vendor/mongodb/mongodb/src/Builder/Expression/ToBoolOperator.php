@@ -1,42 +1,3 @@
-<?php
-
-/**
- * THIS FILE IS AUTO-GENERATED. ANY CHANGES WILL BE LOST!
- */
-
-declare(strict_types=1);
-
-namespace MongoDB\Builder\Expression;
-
-use DateTimeInterface;
-use MongoDB\BSON\Type;
-use MongoDB\Builder\Type\Encode;
-use MongoDB\Builder\Type\ExpressionInterface;
-use MongoDB\Builder\Type\OperatorInterface;
-use stdClass;
-
-/**
- * Converts value to a boolean.
- * New in MongoDB 4.0.
- *
- * @see https://www.mongodb.com/docs/manual/reference/operator/aggregation/toBool/
- * @internal
- */
-final class ToBoolOperator implements ResolvesToBool, OperatorInterface
-{
-    public const ENCODE = Encode::Single;
-    public const NAME = '$toBool';
-    public const PROPERTIES = ['expression' => 'expression'];
-
-    /** @var DateTimeInterface|ExpressionInterface|Type|array|bool|float|int|null|stdClass|string $expression */
-    public readonly DateTimeInterface|Type|ExpressionInterface|stdClass|array|bool|float|int|null|string $expression;
-
-    /**
-     * @param DateTimeInterface|ExpressionInterface|Type|array|bool|float|int|null|stdClass|string $expression
-     */
-    public function __construct(
-        DateTimeInterface|Type|ExpressionInterface|stdClass|array|bool|float|int|null|string $expression,
-    ) {
-        $this->expression = $expression;
-    }
-}
+еlдJеlееl┤яеl╢неl╕>еl╕Fеl╝3еl╝~еl╛■еl└wеl└~еl┬еl─┬еl╔>еl═щеl╨Hеl╨Jеl┘╖еlр┼еlтМеlц!еlщ7еlщ┐еlэеlёqеlЄ*еlЄбеlїeеl∙еm{еmреmРеm╕еm─еmеm+еm*Йеm,vеm-еm6еm6nеm8Хеm>Щеm@беmLеmPnеmQRеmR╜еmU╨еmVQеmVcеmXеmX┌еmXЎеm[еm[ўеmdtеmg;еmmеmp|еmq[еmtZеmu7еmx▒еmxреmБеmЖпеmЗеmМKеmПжеmР┌еmС░еmТнеmЮvеmЯ<еmеяеm░Eеm░╔еm╢Щеm╖uеm╗wеm┐еm├┴еm═еm╨беm╥Vеm╘╦еm╓еm▀Rеmф8еmёАеmЄ■еmЎ"еmЎOеmЎ|еn#еnуеn┤еn╬еn	оеnеnoеn{еnеn~еnреn┐еnэеn ееn"теn)lеn,зеn3├еn8Єеn:иеn<ъеn=еn?■еnFzеnG█еnHOеnJеnPеnQгеnRуеn[-еn]еn]0еn^беn^геn^░еncJеnfЩеnfўеnkСеnsеnwеnДеnЖKеnК░еnМ*еnО=еnЦAеnШ6еnШмеnЩ
+еnЬЬеnбGеnж╬еnзеnкBеn▓Пеn│Уеn╡tеn╡╣еn║Gеn╛╜еn┐kеn┬меn╟їеn╔кеn═0еn╬Ъеn╧веn╥Феnфaеnх├еnьeеnў
+еn■▐еo/еo-еoыеo!еoеoеo#╬еo$nеo&╜еo+nеo,╦еo.ёеo5еo8шеo:еo:╥еo='еo?√еoA│еoBеoKФеoLWеoM┤еoNMеoN{еoOОеoS(еoXеoZrеo[кеo`+еoc╟еok╥еolеooFеor6еovяеozzеoА╒еoВ;еoЛ:еoМrеoУеoУ)еoУЁеoФтеoЪЪеoиPеoйўеo▓^еo╣оеo╗!еo╛╙еo┐6еo└?еo├_еo╦еo╧¤еo╨mеo█!еo▀·еoщ┌еoЎ╨еoў╨еo№аеp╦еpWеpъеpїеp!леp#Єеp%|еp%√еp)nеp-,еp.8еp1gеp3Gеp6оеp6уеp:╧еp;<еp;Цеp<Lеp>5еp>:еpEwеpGKеpTyеpV╩еpaмеpb┐еpdеpeэеpf	еpj▒еplГеpnпеpoеpqKеps;еpw!еpyEеp|'еpЖЦеpЛїеpР╕еpФщеpХtеpЦнеpЧРеpа▓еpзЗеp╕Cеp╣еp╣эеp┐Теp┬шеp╩жеp╧eеp╫@еpуєеpф№еpц4еpъЭеpЄ╖еp°меp·4еp■еq'еqАеq7еq┌еqеq%еq╤еqЬеq#еq%єеq(/еq+╠еq2Юеq8┤еq;Aеq<оеq=еq@!еqCcеqD-еqG╜еqH╜еqIМеqKqеqL

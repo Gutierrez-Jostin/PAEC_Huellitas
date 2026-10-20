@@ -1,71 +1,3 @@
-<?php
-/*
- * Copyright 2015-present MongoDB, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-namespace MongoDB;
-
-use MongoDB\Driver\Exception\LogicException;
-use MongoDB\Driver\WriteResult;
-
-/**
- * Result class for a single-document insert operation.
- */
-class InsertOneResult
-{
-    public function __construct(private WriteResult $writeResult, private mixed $insertedId)
-    {
-    }
-
-    /**
-     * Return the number of documents that were inserted.
-     *
-     * This method should only be called if the write was acknowledged.
-     *
-     * @see InsertOneResult::isAcknowledged()
-     * @throws LogicException if the write result is unacknowledged
-     */
-    public function getInsertedCount(): int
-    {
-        return $this->writeResult->getInsertedCount();
-    }
-
-    /**
-     * Return the inserted document's ID.
-     *
-     * If the document had an ID prior to inserting (i.e. the driver did not
-     * need to generate an ID), this will contain its "_id". Any
-     * driver-generated ID will be a MongoDB\BSON\ObjectId instance.
-     */
-    public function getInsertedId(): mixed
-    {
-        return $this->insertedId;
-    }
-
-    /**
-     * Return whether this insert was acknowledged by the server.
-     *
-     * If the insert was not acknowledged, other fields from the WriteResult
-     * (e.g. insertedCount) will be undefined.
-     *
-     * If the insert was not acknowledged, other fields from the WriteResult
-     * (e.g. insertedCount) will be undefined and their getter methods should
-     * not be invoked.
-     */
-    public function isAcknowledged(): bool
-    {
-        return $this->writeResult->isAcknowledged();
-    }
-}
+b]xb^bdybfqbgèbj,bjßbnÑbsbt!bwb{[b|Øbxbòb„_b†ÍbˆAbŠîb‹rbŒb’ßb“(b•Ùb–0b™¿bŸbb¥)b«b«Íb¬_b­bbºébÂîbÃ,bÃçbÅÍbĞ=bĞ©bÓŞbÕbÙbÙ>bÚìbÚóbÛbæbèùbéebéµbêLbìbï€bó%bóDb÷İbùfbÿNc>c¶c,cc	hc›cgcócõcïcâc#hc+¼c5¯c5Óc8pc:Çc;>c;Šc< cLcODcP£cP©cQ•cXTc[¨c^mcb…ccŸcmÙc{c€c€ºc…˜c…ûc‡¤cˆDcŠcŠàc•˜c˜kc¢{c¢€c¬©c­c²7cµc¹	c¹”c¼KcÂcÅäcÌzcÌ±cÒ¸cÕ|c×âcÜŸcä–cåcå­cé~cé£cô1cıcşˆcş¦dÄdd–dËdDdHd!}d#@d$æd&©d'Sd/œd0ëd4üd=_d@ûdA	dBGdG@dKædNdNpdR™dSdd^td^Ídaüdgİdi¥dmšdoXdpÍdtZd|d„rd„Äd…‚dŠd4dd“@d™Qdœ÷dŸ­d õd¦Àd¨6d«(d¬úd­–d´Ùd·1dº¸dÁkdÒSdÖ@dÙídŞdáZdá_dä8dæÃdédëÛdó6døÏdı$eenee¶eUe¬eÇe!9e!ˆe&ue)Še/æe6‘e:me:¶eFúeH!eHÌeUƒeVceX˜eZÎe]¨e^µe^ıebçecÜed	efäegrejwejãen˜eqaesJetleu_ev³ew{ex\e}eEe›e‘Te•e˜Keœue¡#e¢¶eª‘e®Yeµe¾îeÁXeÄeÄeÆeeÉeËúeÍ¹eÍÆeÖÉeÚMeáëeäoeå eæ°eë.eëyeëšeî¸eğ&eóÙeö'eú>eı7eşf
+pff#3f$[f$ùf' f'nf0Kf0°f0²f1+f<f>pf@“fB“fEIfJYfPfSfXŞfZÉf[zff¢fjËfmÓfnÆfsDft…ft¡fz(f{çf…fÿf‡ÚfˆÄf‰[fŠ©fŒŞf‘Cf’f’£f•—f–œf—if™Ûf )f¥fª:f¬1f°šf´#f¶f¶Gf·úfºdf»×fÁfÃÓfÄùfÉ¡fĞVfÒlfæufépfóâfõLfùÛfû—fûºgmg¦g'gEg?g\gìg(g"Cg"Kg#Og)Cg-zg4g5ëg7 g8Ag93g;Og<Äg=Ig=•g?‚gANgBVgEygFâgI‰gP¼gQ?gTïgU`gU’gXYg` g`ÔgaßgbGgd˜gg³ghºgoFgq+gv’gvıg8g¦g†‹gŒhgigjg’g–gÛg¦Úg°g±ÿg³2g·¥g¸gÃÓgÄJgÊígËjgÕqg×GgÛÇgİgİ™gã°gækgégé–gïgñ´hzhõháhºhh-h—hhhŒh#ch%0h'h(–h3ëh9üh<­hA¡hCãhIÑhL0hTZhXíhY˜h\dh^âhaùhehe"hf9hzŠh{Wh~¤h‚àh‡$h‹h‹ºh‰h‘h’Fh”Xh–Oh–šh›ühœ·h8h¡8h­£h­İh³’h´Àhµ|h¹Îh¼h¾\h¾ph¾ŒhÀ:hÁ­hÂhÃÄhÅÛhÆÔhÇÔhÉnhÌIhÎhÑ\hÙaháİhã¬häÑhå±hì=hïghñhúÖhû,hıÙiiØi
+îi2iïigiIi×iŞi&èi(:i/i/Li2pi6Ñi7i9²i:†i:ıi=˜i?biF*iHiHêiK>iLiU(iVˆiXÒiYiZ&i[&iaJieÚig¤ii7iifisLisôiv=izyi{Úi|òi}ˆiŞi€¡i‚™iŠiŠÚi‹wiŒ6iÉi’ói“Zi™5iœkiŸ$i£…i¥/i¦BiªiªZi²Pi²Òi³Æi³âi

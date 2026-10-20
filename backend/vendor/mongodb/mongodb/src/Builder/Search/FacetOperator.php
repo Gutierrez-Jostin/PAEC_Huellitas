@@ -1,49 +1,3 @@
-<?php
-
-/**
- * THIS FILE IS AUTO-GENERATED. ANY CHANGES WILL BE LOST!
- */
-
-declare(strict_types=1);
-
-namespace MongoDB\Builder\Search;
-
-use MongoDB\BSON\Document;
-use MongoDB\BSON\Serializable;
-use MongoDB\Builder\Type\Encode;
-use MongoDB\Builder\Type\OperatorInterface;
-use MongoDB\Builder\Type\Optional;
-use MongoDB\Builder\Type\SearchOperatorInterface;
-use stdClass;
-
-/**
- * The facet collector groups results by values or ranges in the specified
- * faceted fields and returns the count for each of those groups.
- *
- * @see https://www.mongodb.com/docs/atlas/atlas-search/facet/
- * @internal
- */
-final class FacetOperator implements SearchOperatorInterface, OperatorInterface
-{
-    public const ENCODE = Encode::Object;
-    public const NAME = 'facet';
-    public const PROPERTIES = ['facets' => 'facets', 'operator' => 'operator'];
-
-    /** @var Document|Serializable|array|stdClass $facets */
-    public readonly Document|Serializable|stdClass|array $facets;
-
-    /** @var Optional|Document|SearchOperatorInterface|Serializable|array|stdClass $operator */
-    public readonly Optional|Document|Serializable|SearchOperatorInterface|stdClass|array $operator;
-
-    /**
-     * @param Document|Serializable|array|stdClass $facets
-     * @param Optional|Document|SearchOperatorInterface|Serializable|array|stdClass $operator
-     */
-    public function __construct(
-        Document|Serializable|stdClass|array $facets,
-        Optional|Document|Serializable|SearchOperatorInterface|stdClass|array $operator = Optional::Undefined,
-    ) {
-        $this->facets = $facets;
-        $this->operator = $operator;
-    }
-}
+©ÈOM©ÈS©ÈUƒ©ÈWæ©È^N©È_³©ÈgO©ÈiØ©Èn±©ÈrÖ©Ètk©Èv¥©Èw8©Èx"©ÈzN©ÈzÆ©È}¾©È‡Ø©Èš#©È¤Â©È¥&©È§z©È§™©È±$©È²‰©È³º©Èµ¾©È¶¾©È¼3©È½|©È½¢©È¾&©ÈÂâ©ÈÅJ©ÈÆÌ©ÈÉ
+©ÈÓO©ÈÔP©ÈÛ×©ÈÜÜ©ÈÝW©ÈÝ„©ÈßZ©Èáî©Èã^©Èæ@©ÈéÆ©Èíh©Èî!©Èð/©Èö^©ÈûV©Èþ©Èþ©É¹©É"©É©ÉW©ÉÑ©Éä©ÉO©Én©É©É J©É#ñ©É%©É(×©É)/©É*¤©É+^©É,©É,é©É3ù©É8®©É;~©É=Q©ÉBv©ÉC—©ÉE¿©ÉNï©ÉPO©ÉT©ÉV¨©ÉWÈ©ÉYà©É]v©É^)©É^Š©É_ÿ©Éb!©Éd©Éh±©Éq©Ét©Éw=©Éw»©Éy©Éy^©É~~©É‚Í©ÉŽZ©ÉÌ©Éˆ©É—à©É—æ©ÉŸË©É¢ô©É¦µ©É§ó©É¬§©É®ð©É±©É´~©É¶›©É¸æ©É¿¸©ÉÀè©ÉÏ@©ÉÑ©ÉÕB©ÉÛŒ©ÉÜ©Éà"©Éá!©Éáê©Éâ©Éä^©ÉçY©Éè½©É÷f©Éû©Éû^©Éûè©ÊV©ÊÂ©ÊÓ©Ê	t©ÊÃ©Ê}©Êá©Êç©ÊV©Ê€©Êù©Ê&£©Ê'¦©Ê*Ç©Ê-¼©Ê/©Ê4ó©Ê9V©Ê9u©Ê9ü©Ê?'©Ê@¼©ÊF©ÊF”©ÊFÊ©ÊV‘©ÊZX©Ê\©Ê]è©Êb±©Êcv©Êcß©ÊeÊ©ÊlË©Ên´©Êo©Êp ©ÊsM©Êz©Ê…©Ê†³©Ê‡Ò©Ê‹Ê©Ê‹ã©ÊŒë©Ê}©Ê“©Ê•7©Êšç©Ê 7©Ê Æ©Ê¡Ì©Ê£L©Ê«Í©Ê®+©Ê¯©Ê¯†©Ê¯£©Ê°©Ê±6©Ê´©Ê·p©Ê¸Z©Ê»©Ê¿ö©ÊÉ©ÊËX©ÊÑÍ©ÊÓÀ©Ê×©ÊÛ¥©ÊÜ›©Êã¸©Êä4©Êòx©ÊóÈ©Êö ©Êü©ÊýL©ËÈ©Ëm©Ë!©ËÉ©Ëq©ËÇ©Ëq©ËÛ©Ë,×©Ë-Ÿ©Ë/œ©Ë1Ç©Ë4(©Ë9‰©Ë:	©Ë;Æ©Ë=ý©ËB©ËF:©ËF[©ËFž©ËG-©ËM©ËN"©ËPê©ËRq©ËSà©ËZS©Ë^=©Ë_ ©Ëa©Ëaœ©Ëi5©Ëm”©Ëq…©ËsO©Ëtr©Ëtí©Ëvo©ËÊ©Ë…©Ë…8©Ë@©ËŽÀ©Ë–	©Ë˜%©Ë›•©Ëž©ËŸA©Ë ©Ë¢%©Ë£m©Ë©¹©ËªÍ©Ë¬~©Ë°3©Ë²ì©ËÃ©ËÆ©ËÇë©ËÉp©ËÎ¡©ËÐæ©ËÒY©ËÒ©ËÒ—©ËÔñ©ËØ=©ËØm©Ëá&©Ëâz©ËëÆ©Ëíg©Ëö©Ëûì©Ìâ©Ì9©ÌÕ©Ì©Ì²©ÌÅ©Ì!©Ì#Ÿ©Ì.Ñ©Ì3ò©Ì3ù©Ì7©Ì8™©Ì:Õ©Ì@A©ÌAÉ©ÌBM©ÌC:©ÌE ©ÌJM©ÌLD©ÌL ©ÌM.©ÌMM©ÌMæ©ÌR²©ÌUË©ÌW©ÌX¸©ÌYò©ÌZ~©ÌZü©Ì_C©Ì_Q©Ìgd©Ìk©Ìpž©Ìr©Ìt”©Ìtÿ©Ì|ç©Ì~©Ì‚¤©Ì‚ó©Ì·©Ì—[©Ì˜©Ì˜ï©Ì™©Ì¡Á©Ì¢©Ì¥X©Ìªê©Ì²¯©Ì¶z©Ì»e©Ì»Ë©Ì¾Å©Ì¾Ë©Ì¿ƒ©ÌÀ7©ÌÃ?©ÌÊk©ÌÍj©ÌÓX©ÌÝ©ÌÝO©ÌßE©ÌßX©ÌãÊ©Ìä	©ÌäI©Ìä©Ìí#©Ìî¥©Ìô©Ìõi©Ìö+©ÌöH©ÌøC©Ìø]©Ìú\©Ìü©ÌýN©Ìþý©Í:©Íß©Í-©Í
+4©ÍI©Í©Í©Í6©ÍU©Í)©Í ©Í!©Í!©Í+©Í.×©Í3a©Í5i©Í:Õ©Í<K©Í=©Í@¦©ÍA©ÍMh©ÍMí©ÍN©ÍN¥©ÍS±©ÍWƒ©ÍWí©ÍY»©ÍZ¹©Í[Ø©Í_”©ÍfA©Ík5©Íkt©ÍlÒ©Íqý©Ít4©Ít{©Ív^©Íx©Í{²©Í‚Ê
