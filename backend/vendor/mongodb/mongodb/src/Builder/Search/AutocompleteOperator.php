@@ -1,76 +1,9 @@
-<?php
-
-/**
- * THIS FILE IS AUTO-GENERATED. ANY CHANGES WILL BE LOST!
- */
-
-declare(strict_types=1);
-
-namespace MongoDB\Builder\Search;
-
-use MongoDB\BSON\Document;
-use MongoDB\BSON\Serializable;
-use MongoDB\Builder\Type\Encode;
-use MongoDB\Builder\Type\OperatorInterface;
-use MongoDB\Builder\Type\Optional;
-use MongoDB\Builder\Type\SearchOperatorInterface;
-use stdClass;
-
-/**
- * The autocomplete operator performs a search for a word or phrase that
- * contains a sequence of characters from an incomplete input string. The
- * fields that you intend to query with the autocomplete operator must be
- * indexed with the autocomplete data type in the collection's index definition.
- *
- * @see https://www.mongodb.com/docs/atlas/atlas-search/autocomplete/
- * @internal
- */
-final class AutocompleteOperator implements SearchOperatorInterface, OperatorInterface
-{
-    public const ENCODE = Encode::Object;
-    public const NAME = 'autocomplete';
-
-    public const PROPERTIES = [
-        'path' => 'path',
-        'query' => 'query',
-        'tokenOrder' => 'tokenOrder',
-        'fuzzy' => 'fuzzy',
-        'score' => 'score',
-    ];
-
-    /** @var array|string $path */
-    public readonly array|string $path;
-
-    /** @var string $query */
-    public readonly string $query;
-
-    /** @var Optional|string $tokenOrder */
-    public readonly Optional|string $tokenOrder;
-
-    /** @var Optional|Document|Serializable|array|stdClass $fuzzy */
-    public readonly Optional|Document|Serializable|stdClass|array $fuzzy;
-
-    /** @var Optional|Document|Serializable|array|stdClass $score */
-    public readonly Optional|Document|Serializable|stdClass|array $score;
-
-    /**
-     * @param array|string $path
-     * @param string $query
-     * @param Optional|string $tokenOrder
-     * @param Optional|Document|Serializable|array|stdClass $fuzzy
-     * @param Optional|Document|Serializable|array|stdClass $score
-     */
-    public function __construct(
-        array|string $path,
-        string $query,
-        Optional|string $tokenOrder = Optional::Undefined,
-        Optional|Document|Serializable|stdClass|array $fuzzy = Optional::Undefined,
-        Optional|Document|Serializable|stdClass|array $score = Optional::Undefined,
-    ) {
-        $this->path = $path;
-        $this->query = $query;
-        $this->tokenOrder = $tokenOrder;
-        $this->fuzzy = $fuzzy;
-        $this->score = $score;
-    }
-}
+�t, mật khẩu chỉ được lưu trên thiết bị này.Mật khẩu của bạn cho <b>$1</b> được lưu trên thiết bị này và vào Tài khoản Microsoft của bạn. Bạn muốn xóa cái nào?Từ tài khoản Microsoft của bạnTừ thiết bị nàySite và ứng dụngĐi đến trang Kiểm traĐi đến trang Mật khẩuChuyển tới trang Cài đặtDi chuyển mật khẩu đã lưu vào Tài khoản Microsoft của bạn?Khi bạn lưu mật khẩu vào Tài khoản Microsoft của mình, bạn có thể sử dụng chúng trên thiết bị này và bất kỳ thiết bị nào khác mà bạn đã đăng nhậpDi chuyểnKhông tìm thấy mật khẩu nàoChỉnh sửa phím mật khẩuTên hiển thịKhông có tên hiển thịKhông có tên người dùngXóa phím mật khẩu?Tài khoản $1 của bạn sẽ không bị xóaMã khóa này không còn hoạt động. Mã khóa đã bị xóa khỏi $1 và sẽ sớm bị xóa khỏi đây. <a href='https://permanently-removed.invalid'>Thông tin về mã khóa</a>Bạn đã tạo mã khóa này trên $1Tự động tạo mật mã để đăng nhập nhanh hơnCho phép các trang web và ứng dụng nâng cấp các tài khoản hiện có để sử dụng mã khóaLoại bỏ quyền truy nhập vào mật mã của bạn trên thiết bị nàyĐể cấp lại quyền truy nhập vào mật khẩu cho thiết bị này, hãy đăng nhập vào trang web hoặc ứng dụng bằng mật mã đã lưuLoại bỏ quyền truy nhậpĐã loại bỏ quyền truy nhập bằng mã khóaXóa tất cả dữ liệu $1Mật khẩu, mật mã và dữ liệu khác sẽ bị xóa vĩnh viễn khỏi $1Dữ liệu đã xóaBạn sắp xóa dữ liệu $1 của mìnhBạn sắp xóa dữ liệu $1 của bạn được lưu trên thiết bị nàyNếu bạn tiếp tục, mật khẩu, mã khóa và dữ liệu khác của bạn sẽ bị xóa vĩnh viễn khỏi $1. Mọi tài khoản bạn đã tạo cho các trang web hoặc ứng dụng sẽ không bị xóa.Dành cho $1Với $1, $2{COUNT, plural,
+    =0 {Không có}
+    =1 {Để biết $1, $2 và 1 nữa}
+    other {Cho $1, $2 và {COUNT} nữa}}{COUNT, plural,
+    =1 {1 mật khẩu}
+    other {{COUNT} Mật Khẩu}}{COUNT, plural,
+    =1 {1 mật mã}
+    other {{COUNT} passkey}}Sao chép tên hiển thịĐã sao chép tên hiển thị vào bảng tạm{COUNT, plural,
+    =1 {Ch�

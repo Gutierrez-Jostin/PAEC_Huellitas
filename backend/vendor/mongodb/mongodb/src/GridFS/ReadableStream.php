@@ -260,46 +260,12 @@ final class ReadableStream
 
         $actualChunkSize = strlen($this->buffer);
 
-        $expectedChunkSize = $this->chunkOffset === $this->numChunks - 1
-            ? $this->expectedLastChunkSize
-            : $this->chunkSize;
-
-        if ($actualChunkSize !== $expectedChunkSize) {
-            throw CorruptFileException::unexpectedSize($actualChunkSize, $expectedChunkSize);
-        }
-
-        return true;
-    }
-
-    /**
-     * Advance to the next chunk and initialize the buffer to its data.
-     *
-     * @return boolean Whether there was a next chunk to read
-     * @throws CorruptFileException if an expected chunk could not be read successfully
-     */
-    private function initBufferFromNextChunk(): bool
-    {
-        if ($this->chunkOffset === $this->numChunks - 1) {
-            return false;
-        }
-
-        if ($this->chunksIterator === null) {
-            return false;
-        }
-
-        $this->bufferOffset = 0;
-        $this->chunkOffset++;
-        $this->chunksIterator->next();
-
-        return $this->initBufferFromCurrentChunk();
-    }
-
-    /**
-     * Initializes the chunk iterator starting from the current offset.
-     */
-    private function initChunksIterator(): void
-    {
-        $this->chunksIterator = $this->collectionWrapper->findChunksByFileId($this->file->_id, $this->chunkOffset);
-        $this->chunksIterator->rewind();
-    }
-}
+        $expe  ArH‹x  H…ÉtèX– ƒ½°  ArH‹¸  H…ÉtègX– (t$0HƒÄH[_^A\A]A^A_]ÃH‰T$UAWAVAUATVWSHƒìHHª€   )t$0H‹à  H…ø  H9Át
+H…ÉtèX– H‹M¸HEÐH9Át
+H…ÉtèûW– (t$0HƒÄH[_^A\A]A^A_]ÃUAWAVVWSHìˆ   H¬$€   HÇE þÿÿÿL‰ËL‰ÇI‰ÖH‰ÎHUüÇ    L‰Áè¾JºÿL}ØIÇ    L‰ñL‰úI‰øI‰ÙèÀ% I‹¨u
+€{ tÆCH‰H‰ðHÄˆ   [_^A^A_]Ã‹ÿÊH‰Ùèºÿ„ÀuH‹EØëÐD‹EüHU¸L‰ñA¹É  è[êÿDŠKA€ñLuàH‰ÙL‰òA¸
+   è˜¾” H¾E÷H…ÀyL‹uàH‹EèHU¨L‰2H‰BHM¸èJ¨ÿH] H‰ùH‰Úè»@ºÿH‹HU¨H‰ÆBHM¸èÞeËÿHÇ   €}÷ y	H‹Màè¯V– HM¸è”êÿé1ÿÿÿH‰T$UAWAVVWSHƒì(Hª€   €}÷ y
+H‹MàèzV– HƒÄ([_^A^A_]ÃH‰T$UAWAVVWSHƒì(Hª€   HM¸è9êÿHƒÄ([_^A^A_]ÃVHƒì@H‰ÎH‹ÞQÔ H1àH‰D$8H‹HT$,H‰ÆBè*eËÿH‹D$8H1àH‹³QÔ H9Áu	H‰ðHƒÄ@^ÃH‹L$8H1áè¸a– ÌÌVWSHƒì L‰ÏH‰ÐH‰ÎL‰IHÇA    D‰A I‹QH‰ÁèÜEÁÿH…ÀtH‰Ã¿   ‰>H‹C H‰FH‰ðHƒÄ [_^ÃH‹_HƒûwH0gŸ H‰ÊE1ÀI‰Éè\š HƒãðH‹èµÂÿH…Àt
+H‰Ã¿
+   ë±H‹HƒÿwHöfŸ H‰ÊE1ÀI‰Éè"š HƒçðH‹èUdÁÿH‰Ã¿   H…À…uÿÿÿHÄfŸ H‰ÊE1ÀI‰Éèð~š é[ÿÿÿVHƒì0H‰ÎH‹©PÔ H1àH‰D$(HQWÀA AÇ   A¶ÁL	ÀH‰A I‹@H‹ HL$ H‰èæÏÁÿH‹D$(H1àH‹[PÔ H9Áu	H‰ðHƒÄ0^ÃH‹L$(H1áè``– ÌÌVHƒì ‹Hƒøw^H‰ÖH?c® Hc‚HÐÿàHÇ    H‰ðHƒÄ ^ÃH‹A H‹@ H‰ëêH‹A HƒàþtÙëëH‹A H‰¨tÓHÜeŸ H‰ÊE1ÀI‰Éè~š ë¼Hb® H•a® A¸  è*É“ ÌÌHƒì(‹ƒøw+ºìÿ  £Âs1ÀHƒÄ(Ãº   £ÂsH‹A ëëH‹A HƒàþëáH³a® HDa® A¸;  èÙÈ“ ÌUVHƒì(Hl$ HÇE þÿÿÿ‹ƒÀóƒøvHƒÄ(^]ÃH‹qH…ötð¸ÿÿÿ?#ƒøu
+HNèÊûÿH‰ñHƒÄ(^]égS
