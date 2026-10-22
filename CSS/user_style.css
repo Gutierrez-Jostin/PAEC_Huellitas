@@ -6,13 +6,33 @@ body {
 .button-size {
     border-radius: 10px;
     padding: 5px 5px;
-    width: 300px;
-    height: 30px;
+    margin: 4px;
+    width: 325px;
+    height: 35px;
+    font-size: 18px;
+}
+
+.button-enter-size {
+    border-radius: 25px;
+    padding: 8px 8px;
+    margin: 10px;
+    width: 335px;
+    height: 50px;
+    font-size: 21px;
+    background-color: #1a4161;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.button-enter-size:hover {
+    background-color: #224a6b;
+    color: #d1d1d1;
 }
 
 .head {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 12px;
 }
@@ -29,11 +49,39 @@ body {
     justify-content: center;
 }
 
+.in-center {
+    padding: 125px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.held-user {
+    display: flex;
+    justify-content: center;
+}
+
+.login-title {
+    font-size: 32px;
+    color: white;
+}
+
+.info {
+    color: white;
+}
+
+.icon {
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+}
+
 .logo-bar {
     background-color: white;
     border-radius: 40px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding-left: 35px;
     padding-right: 35px;
 
@@ -86,36 +134,24 @@ body {
     margin-top: 5px;
 }
 
-.button-off {
-    color: white;
+.button-transparent {
+    border-radius: 15px;
+    color: #cacaca;
     text-decoration: none;
-    font-size: 18px;
-    margin: 4px;
-    padding: 4px 4px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background: linear-gradient(#40a9ff00, #122c4100);
+    font-size: 16px;
+    margin-top: 250px;
+    padding: 15px 15px;
+    background: #2c2c2c96;
 
-    opacity: 0.6;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
-.button-off:hover {
-    background: linear-gradient(#40a9ff00, #122c418e);
-    opacity: 1;
-    border-top: 1px white;
-    text-decoration: underline;
+.button-transparent:hover {
+    color: white;
 }
 
-.button-on {
-    color: white;
-    background: linear-gradient(#40a9ff00, #122c418e);
-    text-decoration: none;
-    font-size: 18px;
-    margin: 4px;
-    padding: 4px 4px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+.margin {
+    margin-top: 15px;
 }
 
 main {
@@ -135,8 +171,10 @@ aside {
 
 section {
     width: 100%;
-    background-color: white;
-    padding: 15px;
+    background-image: linear-gradient(#08080850, #08080886), url(../files/backgrounds/login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px;
     border-radius: 25px;
 }
 
