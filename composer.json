@@ -12,7 +12,7 @@
     "config": {
         "audit": {
             "block-insecure": false
-        }
+        },
         "platform-check": false
     }
 }
