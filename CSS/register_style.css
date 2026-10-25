@@ -1,0 +1,86 @@
+/* Estilos exclusivos para register.html */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-right: 15px;
+    font-size: 16px;
+    color: #000;
+    text-align: right;
+    width: 40%; 
+}
+
+.form-group input {
+    width: 50%; 
+    padding: 8px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2b5c85;
+}
+
+.btn-register {
+    background-color: #2b5c85; 
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px; 
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 300px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #1e4363; 
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.login-link a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.login-link a:hover {
+    color: #2b5c85;
+}
