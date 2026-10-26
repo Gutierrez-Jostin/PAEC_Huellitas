@@ -48,3 +48,25 @@ article {
     font-weight: 900;
     min-height: 60vh;
 }
+
+.button-transparent {
+    border-radius: 15px;
+    color: #cacaca;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 250px;
+    padding: 15px 15px;
+    background: #2c2c2c96;
+
+    transition: 0.3s;
+
+}
+
+.button-transparent:hover {
+    color: white;
+}
+
+.margin {
+    margin-top: 15px;
+    margin-left: 15px;
+}
