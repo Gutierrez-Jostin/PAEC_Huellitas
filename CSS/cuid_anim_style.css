@@ -1,5 +1,37 @@
 body {
-    background-color: #1a5cb0; 
+    background-color: #40a9ff; 
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.content-right {
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+}
+
+.logo-bar {
+    background-color: white;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    align-self: flex-start;
+} 
+
+.logotype {
+    object-fit: cover;
+    border-radius: 100%;
+    width: 125px;
+    height: 125px;
+    display: inline-block;
 }
 
 .logobox {
