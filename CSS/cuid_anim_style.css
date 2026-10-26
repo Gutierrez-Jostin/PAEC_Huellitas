@@ -1,0 +1,50 @@
+body {
+    background-color: #1a5cb0; 
+}
+
+.logobox {
+    display: flex;
+    align-items: center;
+}
+.logomodel {
+    display: flex;
+    width: 10%;
+   height: 10%;
+}
+
+.title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+section {
+    flex-grow: 1;    
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 85vh;
+    padding: 1px;
+}
+
+.tit-art {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    background-color: rgba(2, 154, 255, 0.6);
+    border-radius: 15px;
+    margin: 20px auto 30px auto;
+    width: 90%;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+article {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    min-height: 60vh;
+}
