@@ -1,11 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; 
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    min-height: 100vh;
+    background-color: #ffffff;   
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .register-container {
@@ -82,6 +81,45 @@ body {
     text-decoration: underline;
 }
 
+.button-transparent {
+    border-radius: 15px;
+    color: #cacaca;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 250px;
+    padding: 15px 15px;
+    background: #2c2c2c96;
+
+    transition: 0.3s;
+
+}
+
+.button-transparent:hover {
+    color: white;
+}
+
+.margin {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
 .login-link a:hover {
     color: #2b5c85;
+}
+
+.main-content {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+   color: #333;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
 }
