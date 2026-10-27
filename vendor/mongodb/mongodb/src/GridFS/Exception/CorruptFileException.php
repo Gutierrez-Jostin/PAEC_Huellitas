@@ -1,70 +1,7 @@
-<?php
-/*
- * Copyright 2016-present MongoDB, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+tive relief and specific performance). Nothing stated herein shall limit any other remedies provided under this Agreement or available to DQMH CONSORTIUM, LLC at law. Upon expiration or termination of this Agreement for any reason, you will return or destroy all copies of all DQMH CONSORTIUM, LLC Confidential Information in your possession or control.
 
-namespace MongoDB\GridFS\Exception;
+4. Communications and Feedback.
 
-use MongoDB\Exception\RuntimeException;
+4.1 Feedback. In the course of your use of the DQMH CONSORTIUM, LLC Product and in connection with any related support or other services that may be offered to you by DQMH CONSORTIUM, LLC (the “Services), you may provide DQMH CONSORTIUM, LLC with comments and feedback regarding your use and evaluation of the DQMH CONSORTIUM, LLC Product, including any defects found therein and any recommendations for changes or modifications to the DQMH CONSORTIUM, LLC Product (the “Feedback”). Such Feedback may include, but will not be limited to, any communications from you to DQMH CONSORTIUM, LLC, including (i) any messages, content, materials or other communications sent to fabiola@dqmh.org or any other agent of DQMH CONSORTIUM, LLC, or posted to any website(s) owned or maintained by DQMH CONSORTIUM, LLC; and/or (ii) relating to your use and evaluation of the DQMH CONSORTIUM, LLC Product. Feedback may include communications regarding: (1) which portions of the DQMH CONSORTIUM, LLC Product have been used, (2) the nature of that use, (3) the extent or amount of use, (4) any errors or difficulties discovered and (5) the characteristic conditions and symptoms of the errors and difficulties. You acknowledge and agree that (i) DQMH CONSORTIUM, LLC may use, in any manner and for any purpose, the information gained as a result of your use and evaluation of the DQMH CONSORTIUM, LLC Product, including but not limited to the Feedback; (ii) any corrections, modifications, upgrades or improvements to the DQMH CONSORTIUM, LLC Product based on such Feedback or other input shall be owned and retained entirely by DQMH CONSORTIUM, LLC; and (iii) DQMH CONSORTIUM, LLC shall have no obligation to correct, upgrade, modify, or otherwise support or maintain the DQMH CONSORTIUM, LLC Product pursuant to this license.
 
-use function sprintf;
-
-class CorruptFileException extends RuntimeException
-{
-    /**
-     * Thrown when a chunk doesn't contain valid data.
-     *
-     * @internal
-     */
-    public static function invalidChunkData(int $chunkIndex): self
-    {
-        return new self(sprintf('Invalid data found for index "%d"', $chunkIndex));
-    }
-
-    /**
-     * Thrown when a chunk is not found for an expected index.
-     *
-     * @param integer $expectedIndex Expected index number
-     * @internal
-     */
-    public static function missingChunk(int $expectedIndex): self
-    {
-        return new self(sprintf('Chunk not found for index "%d"', $expectedIndex));
-    }
-
-    /**
-     * Thrown when a chunk has an unexpected index number.
-     *
-     * @param integer $index         Actual index number (i.e. "n" field)
-     * @param integer $expectedIndex Expected index number
-     * @internal
-     */
-    public static function unexpectedIndex(int $index, int $expectedIndex): self
-    {
-        return new self(sprintf('Expected chunk to have index "%d" but found "%d"', $expectedIndex, $index));
-    }
-
-    /**
-     * Thrown when a chunk has an unexpected data size.
-     *
-     * @param integer $size         Actual size (i.e. "data" field length)
-     * @param integer $expectedSize Expected size
-     * @internal
-     */
-    public static function unexpectedSize(int $size, int $expectedSize): self
-    {
-        return new self(sprintf('Expected chunk to have size "%d" but found "%d"', $expectedSize, $size));
-    }
-}
+4.2 Assignment. If you are ever held or deemed to hold any right, title

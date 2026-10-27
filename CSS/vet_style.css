@@ -35,6 +35,20 @@ body {
     justify-content: center;
 }
 
+.med-section {
+    background-color: #184a83;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.item {
+    margin: 15px;
+    background-color: #40a9ff;
+    border-radius: 15px;
+    padding: 10px;
+    display: inline-block;
+}
+
 .content-right {
     text-align: right;
     justify-content: right;
