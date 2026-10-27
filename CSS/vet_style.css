@@ -41,6 +41,129 @@ body {
     padding: 15px;
 }
 
+.section-bar {
+    background-color: #f0f8ff;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.recommend-section {
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.content-vet-recommend {
+    display: flex;
+    background-color: #dedede;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.content-vet-recommend > div {
+    flex: 1;
+    padding: 15px;
+}
+
+.img-visualizer {
+    width: 250px;
+    align-self: stretch;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+.content-vet-service {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.form-center {
+    display: flex;        
+    align-items: center;       
+    justify-content: flex-end; 
+    margin-bottom: 20px; 
+    font-size: 18px; 
+}
+
+.held-user {
+    display: flex;
+    justify-content: center;
+}
+
+.button-appointment-size {
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin: 4px;
+    width: 325px;
+    height: 20px;
+    font-size: 18px;
+}
+
+.button-enter-size {
+    border-radius: 25px;
+    padding: 8px 8px;
+    margin: 10px;
+    width: 335px;
+    height: 50px;
+    font-size: 21px;
+    background-color: #1a4161;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.button-enter-size:hover {
+    background-color: #224a6b;
+    color: #d1d1d1;
+}
+
+.button.show {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 2px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    color: white;
+    background-color: #4b6f9e;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 14px;
+    margin: 2px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #a5c2e7;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: white;
+    background-color: #4b6f9e;
+}
+
+.section {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.section.on {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
 .item {
     margin: 15px;
     background-color: #40a9ff;
@@ -168,6 +291,8 @@ aside {
 section {
     width: 75%;
     background-image: linear-gradient(#00000033, #000000d8), url(../files/backgrounds/vet-care.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 15px;
     border-radius: 25px;
 }

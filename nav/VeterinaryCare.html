@@ -20,8 +20,8 @@
         <div class="content-right">
             
             <div class="user-bar">
-                <a href="nav/Login.html" class="register-buttons">Log In</a>
-                <a href="nav/register.html" class="register-buttons">Sign Up</a>
+                <a href="Login.html" class="register-buttons">Log In</a>
+                <a href="register.html" class="register-buttons">Sign Up</a>
             </div>
 
             <nav class="nav-bar">
@@ -52,31 +52,186 @@
                     <h2>What does our veterinary care entail?</h2>
                     <p>
                         In this section, you will find recommendations from our veterinarians. 
-                        You can consult descriptions of each animal medications, instructions 
-                        for use, and information regarding their purpose; additionally, you will 
-                        learn how to assess youe pet's health from home.
+                        You can consult descriptions of each animal medications, and information 
+                        regarding their purpose.
                     </p>
 
-                    <div class="content-center">
-                        <h2>Medications prescribed by veterinarians</h2>
+                    <div>
+                        <div class="content-center">
+                            <h2>Learn more about our service...</h2>
 
-                        <div class="med-section">
-                            <input type="text" placeholder="Buscar producto por nombre...">
-                            <div>
-                                <div class="item">
-                                    <img src="" alt="test">
-                                    <h3>Example</h3>
-                                    <p>text</p>
+                            <div class="section-bar">
+                                <button onclick="show_content('recommend-section', this)" class="button show">Recommendations</button>
+                                <button onclick="show_content('article-section', this)" class="button">Articles</button>
+                                <button onclick="show_content('service-section', this)" class="button">Check-up appointment</button>
+                            </div>
+                        
+                        </div>
+                            
+                        <div id="recommend-section" class="section on">
+                            <div class="recommend-section">
+                                <h2>The Importance of Following a Veterinary Diagnosis</h2>
+
+                                <p>
+                                    Strict adherence to veterinary guidelines is one of the most critical and important 
+                                    factors when treating any animal with medication. Unlike humans, animals metabolize 
+                                    drugs very differently depending on their species, weight, and general health status, 
+                                    which is why you should never self-diagnose or guess the dosages.
+                                </p>
+
+                                <div>
+                                    <h2 class="content-center">Correct Administration of Medication</h2>
+
+                                    <div class="content-vet-recommend">
+                                        <div>
+                                            <ul>
+                                                <li><b>Respect the administration route:</b> Apply medications exactly as prescribed by 
+                                                    the veterinarian, whether they are oral (syrups, tablets), topical (creams, 
+                                                    spot-ons), or injectable.</li>
+
+                                                <li><b>Technique for tablets:</b> Hide pills inside small portions of wet food or special 
+                                                    treats if the animal resists taking them directly.</li>
+
+                                                <li><b>Consistency in timing:</b> Maintain regular intervals between doses to ensure that 
+                                                    drug levels in the animal's system remain stable and effective</li>
+                                            </ul>
+
+                                            <p>
+                                                Successful treatment depends entirely on precision and consistency. Ensuring the medication 
+                                                enters the animal's system via the correct route, at the exact scheduled time, and without 
+                                                skipped doses is what ultimately allows the therapy to fight the illness effectively.
+                                            </p>
+                                        </div>
+
+                                        <img src="../files/visualizers/veterinary-treatment-1.jpg" alt="visualizer-pet-1" class="img-visualizer">
+                                    </div>
+                                      
+                                    <h2 class="content-center">Monitoring and Side Effect Management</h2>
+
+                                    <div class="content-vet-recommend">
+                                        <div>
+                                            <ul>
+                                                <li><b>Continuous observation:</b> Closely monitor the animal’s behavior during the first 
+                                                    few hours after administration to detect any signs of allergic reactions or intolerance.</li>
+
+                                                <li><b>Watch for common symptoms:</b> Keep an eye out for frequent side effects such as lethargy, 
+                                                    loss of appetite, vomiting, or diarrhea.</li>
+
+                                                <li><b>Complete the full course:</b> Never stop the medication early, even if the animal shows 
+                                                    significant improvement, especially when dealing with antibiotics.</li>
+                                            </ul>
+
+                                            <p>
+                                                Observation is your most powerful tool during recovery. Completing the full treatment course 
+                                                while actively watching for changes in behavior or physical symptoms ensures that side effects 
+                                                are caught early and that the illness does not return stronger.
+                                            </p>
+                                        </div>
+
+                                        <img src="../files/visualizers/veterinary-treatment-2.jpg" alt="visualizer-pet-2" class="img-visualizer">
+                                    </div>
+
+                                    <h2 class="content-center">Safety and Storage</h2>
+
+                                    <div class="content-vet-recommend">
+                                        <div>
+                                            <ul>
+                                                <li><b>No self-medication:</b> Never use human medications (such as paracetamol, acetaminophen, 
+                                                    or ibuprofen) as many are highly toxic and potentially fatal to dogs, cats, and other species.</li>
+
+                                                <li><b>Proper storage:</b> Keep all pharmaceuticals in cool, dry places entirely out of reach of 
+                                                    both animals and children.</li>
+                                            </ul>
+
+                                            <p>
+                                                Prevention is the foundation of animal safety. Keeping human medications strictly away from pets 
+                                                and storing veterinary drugs securely eliminates the risk of accidental poisoning, which is often 
+                                                much more dangerous than the original medical condition.
+                                            </p>
+                                        </div>
+
+                                        <img src="../files/visualizers/veterinary-treatment-3.png" alt="visualizer-pet-3" class="img-visualizer">
+                                    </div>   
                                 </div>
                             </div>
-                            
+                                
                         </div>
-                        
+
+                        <div id="article-section" class="section">
+                            <div class="med-section">
+                                <input type="text" id="buscador" placeholder="Buscar producto por nombre...">
+                                <select name="test" id="categoria">
+                                    <option value="">Todas las categorias</option>
+                                    <option value="">Antibiotico</option>
+                                    <option value="">Antiparasitario</option>
+                                    <option value="">Antiparasitario</option>
+                                </select>
+
+                                <div>
+                                    <div class="item">
+                                        <img src="" alt="test">
+                                        <h3>Example</h3>
+                                        <p>text</p>
+                                    </div>
+                                </div>
+                                <script src="../JS/vet_logic.js"></script>
+                            </div>
+                        </div>
+
+                        <div id="service-section" class="section">
+                            <div class="content-vet-service">
+                                <div class="content-center">
+                                    <h2>Schedule an Appointment</h2>
+
+                                    <div class="held-user">
+                                        <table>
+                                            <tr>
+                                                <th class="form-center">
+                                                    <label for="confirm_password">Address: </label>
+                                                    <input type="text" id="username" placeholder="Any address" class="button-appointment-size"/>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-center">
+                                                    <label for="confirm_password">Number Phone: </label>
+                                                    <input type="text" id="password_login" placeholder="Ej. 123 456 7890" class="button-appointment-size"/>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-center">
+                                                    <label for="confirm_password">Patient's name: </label>
+                                                    <input type="text" id="password_login" placeholder="Pet name" class="button-appointment-size"/>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-center">
+                                                    <label for="confirm_password">Specie: </label>
+                                                    <input type="text" id="password_login" placeholder="Type of animal" class="button-appointment-size"/>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-center">
+                                                    <label for="confirm_password">birthdate: </label>
+                                                    <input type="text" id="password_login" placeholder="xx/xx/xx" class="button-appointment-size"/>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="form-center">
+                                                    <label for="confirm_password">Problem Description: </label>
+                                                    <input type="text" id="password_login" placeholder="Description" class="button-appointment-size"/>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <p>By submitting the request for a veterinary consultation, you are agreeing to our terms and conditions.</p>
+
+                                    <button id="login-enter" class="button-enter-size">Sent</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-                
             </article>
         </section>
 
