@@ -1,0 +1,179 @@
+body {
+    font-family: Arial;
+    background-color: #40a9ff;
+}
+
+.adopcion-container {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.adopcion-header {
+    background-color: #e6dfcd;
+    border: 2px dashed #fff; 
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.tarjetas-wrapper {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+
+}
+
+.tarjeta {
+    background-color: #8dc1f0; 
+    border: 2px solid #4a86c6; 
+    border-radius: 5px;
+    width: 320px; 
+    display: flex;
+    flex-direction: column; 
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
+}
+
+.tarjeta-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;  
+    border-bottom: 2px solid #4a86c6;
+}
+
+.tarjeta-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    flex-grow: 1; 
+}
+
+.tarjeta-info p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.btn-adopcion {
+    background-color: #e6dfcd;
+    color: #000;
+    border: 1px solid #333;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: center; 
+    transition: background-color 0.3s;
+}
+
+.btn-adopcion:hover {
+    background-color: #d1c7b1;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.content-right {
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+}
+
+.logo-bar {
+    background-color: white;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    align-self: flex-start;
+}
+
+.title-logo {
+    height: 50%;
+    margin-left: 15px;
+    width: max-content;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium';
+    letter-spacing: 3px;
+    color: #40a9ff;
+}
+
+.logotype {
+    object-fit: cover;
+    border-radius: 100%;
+    width: 125px;
+    height: 125px;
+    display: inline-block;
+}
+
+.user-bar {
+    margin-top: 10px;
+}
+
+.register-buttons {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    background-color: #0a16205e;
+    padding: 10px 10px;
+    transition: 0.3s;
+    
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.register-buttons:hover {
+    background-color: #0c1c2991;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 69%;
+    margin-top: 5px;
+}
+
+.button-off {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px;
+    padding: 4px 4px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(#40a9ff00, #122c4100);
+
+    opacity: 0.6;
+    transition: 0.8s;
+}
+
+.button-off:hover {
+    background: linear-gradient(#40a9ff00, #122c418e);
+    opacity: 1;
+    border-top: 1px white;
+    text-decoration: underline;
+}
+
+.button-on {
+    color: white;
+    background: linear-gradient(#40a9ff00, #122c418e);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px;
+    padding: 4px 4px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
