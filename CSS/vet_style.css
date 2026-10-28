@@ -150,6 +150,36 @@ body {
     background-color: #4b6f9e;
 }
 
+.search-nav-bar {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    padding: 2px;
+
+    background-color: #40a9ff6e;
+}
+
+.search-button {
+    border-radius: 8px;
+    padding: 10px;
+    width: 325px;
+}
+
+.filter-search-button {
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+}
+
+.img-icon {
+    padding: 10px;
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+}
+
 .section {
     opacity: 0;
     visibility: hidden;
