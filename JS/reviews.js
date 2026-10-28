@@ -32,7 +32,9 @@ async function cargarResenas() {
             article.classList.add("resena");
             
             article.innerHTML = `
-                <div class="avatar">👤</div>
+                <div class="avatar">
+                    <img src="../files/icons/user-icon.png" alt="User">
+                </div>
                 <div class="info">
                     <h3>${resena.usuario || "Anónimo"}</h3>
                     <p class="estrellas">${estrellasHTML}</p>
