@@ -206,3 +206,43 @@ footer {
     justify-content: center;
     padding: 10px 10px;
 }
+
+.formulario-resena {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f4f8fb;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #b3dcf5;
+}
+
+.formulario-resena input, 
+.formulario-resena select, 
+.formulario-resena textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.formulario-resena textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.formulario-resena button {
+    background-color: #018bfc;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario-resena button:hover {
+    background-color: #122c41;
+}
