@@ -246,3 +246,47 @@ footer {
 .formulario-resena button:hover {
     background-color: #122c41;
 }
+
+.profile-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
+.profile-circle { 
+    width: 40px; 
+    height: 40px; 
+    background-color: #0a16205e; /* Mismo fondo que tus botones */
+    color: white; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-weight: bold; 
+    font-size: 1.2em; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+.profile-name { 
+    font-size: 20px; 
+    color: white; 
+    font-weight: bold; 
+}
+
+.btn-logout { 
+    font-size: 16px; 
+    color: white; 
+    text-decoration: none; 
+    background-color: #0a16205e; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-left: 5px; 
+}
+
+.btn-logout:hover { 
+    background-color: #ff4d4d; /* Se pone rojo al pasar el mouse */
+}

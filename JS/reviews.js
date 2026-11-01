@@ -6,19 +6,15 @@ async function cargarResenas() {
     const contenedor = document.getElementById("contenedor-resenas");
     
     try {
-       
         const respuesta = await fetch('../api/reviews.php');
         
-        if (!respuesta.ok) {
-            throw new Error('Error al conectar con el servidor');
-        }
+        if (!respuesta.ok) throw new Error('Server connection error');
 
         const resenas = await respuesta.json();
-        
         contenedor.innerHTML = "";
 
         if (resenas.length === 0) {
-            contenedor.innerHTML = "<p>No hay reseñas todavía.</p>";
+            contenedor.innerHTML = "<p>No reviews yet.</p>";
             return;
         }
 
@@ -30,60 +26,60 @@ async function cargarResenas() {
 
             const article = document.createElement("article");
             article.classList.add("resena");
-            
             article.innerHTML = `
                 <div class="avatar">
                     <img src="../files/icons/user-icon.png" alt="User">
                 </div>
                 <div class="info">
-                    <h3>${resena.usuario || "Anónimo"}</h3>
+                    <h3>${resena.usuario || "Anonymous"}</h3>
                     <p class="estrellas">${estrellasHTML}</p>
-                    <p>${resena.comentario || "Sin comentario"}</p>
+                    <p>${resena.comentario || "No comment"}</p>
                 </div>
             `;
-            
             contenedor.appendChild(article);
         });
 
     } catch (error) {
         console.error("Error:", error);
-        contenedor.innerHTML = "<p>Error al cargar las reseñas. Revisa la consola.</p>";
+        contenedor.innerHTML = "<p>Error loading reviews.</p>";
     }
 }
 
 const formulario = document.getElementById("form-resena");
+const inputUsuario = document.getElementById("input-usuario"); 
+const token = localStorage.getItem('token');
 
-if (formulario) {
+if (!token && formulario) {
+    formulario.innerHTML = "<p style='color: red; font-weight: bold;'>You must <a href='Login.html' style='color: blue;'>log in</a> to leave a review.</p>";
+} else if (formulario && token) {
+    if (inputUsuario) inputUsuario.style.display = 'none';
+
     formulario.addEventListener("submit", async (e) => {
         e.preventDefault(); 
 
-       
-        const usuario = document.getElementById("input-usuario").value;
         const estrellas = parseInt(document.getElementById("select-estrellas").value);
         const comentario = document.getElementById("input-comentario").value;
-
-        const nuevaResena = { usuario, estrellas, comentario };
+        const nuevaResena = { estrellas, comentario };
 
         try {
-            
             const respuesta = await fetch('../api/save_reviews.php', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token 
+                },
                 body: JSON.stringify(nuevaResena)
             });
 
             if (respuesta.ok) {
-           
                 formulario.reset();
-                
-                
                 cargarResenas();
             } else {
-                alert("Hubo un error al guardar la reseña.");
+                const errorData = await respuesta.json();
+                alert(errorData.error || "An error occurred while saving.");
             }
         } catch (error) {
-            console.error("Error al enviar reseña:", error);
-            alert("Error de conexión con el servidor.");
+            console.error("Error sending review:", error);
         }
     });
 }
