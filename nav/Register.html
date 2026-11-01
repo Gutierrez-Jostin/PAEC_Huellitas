@@ -50,5 +50,37 @@
         <p>2026 Edition.</p>
     </footer>
 
+    <script>
+        document.querySelector('.btn-register').addEventListener('click', async (e) => {
+            e.preventDefault(); 
+
+            const nombre = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password_register').value;
+            const confirm = document.getElementById('confirm_password').value;
+            
+            if (password !== confirm) {
+                alert("Las contraseñas no coinciden");
+                return;
+            }
+            
+            try {
+                const respuesta = await fetch('/api/register.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nombre, email, password })
+                });
+                const resultado = await respuesta.json();
+                alert(resultado.mensaje);
+                
+                if (respuesta.ok) {
+                    window.location.href = 'Login.html';
+                }
+            } catch (error) {
+                alert("Error de conexión: " + error.message);
+            }
+        });
+    </script>
+
 </body>
 </html>

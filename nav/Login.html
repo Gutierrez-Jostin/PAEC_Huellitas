@@ -65,5 +65,32 @@
         <p>2026 Edition.</p>
     </footer>
 
+    <script>
+        document.getElementById('login-enter').addEventListener('click', async () => {
+            const email = document.getElementById('username').value; 
+            const password = document.getElementById('password_login').value;
+
+            try {
+                const respuesta = await fetch('/api/login.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                const resultado = await respuesta.json();
+
+                if (respuesta.ok) {
+                    localStorage.setItem('token', resultado.token);
+                    localStorage.setItem('nombre', resultado.nombre);
+                    alert("¡Bienvenido " + resultado.nombre + "!");
+                    window.location.href = '../index.html'; 
+                } else {
+                    alert(resultado.mensaje);
+                }
+            } catch (error) {
+                alert("Error de conexión: " + error.message);
+            }
+        });
+    </script>
+
 </body>
 </html>
