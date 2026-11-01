@@ -52,7 +52,10 @@ const token = localStorage.getItem('token');
 if (!token && formulario) {
     formulario.innerHTML = "<p style='color: red; font-weight: bold;'>You must <a href='Login.html' style='color: blue;'>log in</a> to leave a review.</p>";
 } else if (formulario && token) {
-    if (inputUsuario) inputUsuario.style.display = 'none';
+    if (inputUsuario) {
+        inputUsuario.style.display = 'none';
+        inputUsuario.removeAttribute('required'); 
+    }
 
     formulario.addEventListener("submit", async (e) => {
         e.preventDefault(); 
