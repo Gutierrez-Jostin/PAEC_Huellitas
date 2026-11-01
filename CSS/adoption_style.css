@@ -78,6 +78,7 @@ body {
 .btn-adopcion:hover {
     background-color: #d1c7b1;
 }
+
 .head {
     display: flex;
     justify-content: space-between;
@@ -87,9 +88,10 @@ body {
 
 .content-right {
     text-align: right;
-    justify-content: flex-end; 
-    align-items: flex-end;     
-    padding-right: 15px;       
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    padding-right: 15px;
 }
 
 .logo-bar {
@@ -184,6 +186,7 @@ body {
 .profile-area { 
     display: flex; 
     align-items: center; 
+    justify-content: flex-end; 
     gap: 10px; 
     margin-top: 10px;
     margin-right: 0px; 
@@ -192,7 +195,7 @@ body {
 .profile-circle { 
     width: 40px; 
     height: 40px; 
-    background-color: #0a16205e; /* Mismo fondo que tus botones */
+    background-color: #0a16205e; 
     color: white; 
     border-radius: 50%; 
     display: flex; 
@@ -223,5 +226,5 @@ body {
 }
 
 .btn-logout:hover { 
-    background-color: #ff4d4d; /* Se pone rojo al pasar el mouse */
+    background-color: #ff4d4d; 
 }

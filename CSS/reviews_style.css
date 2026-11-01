@@ -14,9 +14,10 @@ body {
 
 .content-right {
     text-align: right;
-    justify-content: flex-end; 
-    align-items: flex-end;     
-    padding-right: 15px;       
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    padding-right: 15px;
 }
 
 .logo-bar {
@@ -253,15 +254,16 @@ footer {
 .profile-area { 
     display: flex; 
     align-items: center; 
+    justify-content: flex-end; 
     gap: 10px; 
-    margin-top: 10px; 
-    margin-right: 0px;
+    margin-top: 10px;
+    margin-right: 0px; 
 }
 
 .profile-circle { 
     width: 40px; 
     height: 40px; 
-    background-color: #0a16205e; /* Mismo fondo que tus botones */
+    background-color: #0a16205e; 
     color: white; 
     border-radius: 50%; 
     display: flex; 
@@ -292,5 +294,5 @@ footer {
 }
 
 .btn-logout:hover { 
-    background-color: #ff4d4d; /* Se pone rojo al pasar el mouse */
+    background-color: #ff4d4d; 
 }
