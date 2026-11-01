@@ -1,6 +1,8 @@
 body {
     font-family: Arial;
     background-color: #40a9ff;
+    margin: 0;      
+    padding: 0;     
 }
 
 .info {
@@ -204,8 +206,9 @@ body {
 
 .content-right {
     text-align: right;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-end; 
+    align-items: flex-end;     
+    padding-right: 15px;       
 }
 
 .content-center {
