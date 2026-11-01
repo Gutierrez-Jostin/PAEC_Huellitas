@@ -85,8 +85,8 @@ body {
 
 .content-right {
     text-align: right;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .logo-bar {
