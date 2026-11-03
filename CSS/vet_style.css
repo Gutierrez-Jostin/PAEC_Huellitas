@@ -201,7 +201,7 @@ body {
     background-color: #40a9ff;
     border-radius: 15px;
     padding: 10px;
-    display: inline-block;
+    display: flex;
 }
 
 .content-right {
@@ -237,6 +237,14 @@ body {
     font-family: 'Franklin Gothic Medium';
     letter-spacing: 3px;
     color: #40a9ff;
+}
+
+.article-img {
+    object-fit: cover;
+    width: 25%;
+    height: 25%;
+    margin-right: 10px;
+    border-radius: 15px;
 }
 
 .logotype {
