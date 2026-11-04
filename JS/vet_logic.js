@@ -30,7 +30,6 @@ async function cargarArticulos() {
     }
 }
 
-// Dibujamos las tarjetas en el HTML
 function mostrarArticulos(articulos) {
     const contenedor = document.getElementById("contenedor-articulos");
     contenedor.innerHTML = ""; 
@@ -62,9 +61,7 @@ function filtrarArticulos() {
     const categoriaSeleccionada = document.getElementById("categoria").value;
 
     const filtrados = todosLosArticulos.filter(articulo => {
-    
         const coincideNombre = articulo.nombre.toLowerCase().includes(textoBuscado);
-        
         const coincideCategoria = categoriaSeleccionada === "all-categories" || articulo.categoria === categoriaSeleccionada;
 
         return coincideNombre && coincideCategoria;
@@ -74,12 +71,12 @@ function filtrarArticulos() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    
     if (document.getElementById("contenedor-articulos")) {
-        cargarArticulos();
+        if (todosLosArticulos.length === 0) {
+            cargarArticulos();
+        }
 
         document.getElementById("buscador").addEventListener("keyup", filtrarArticulos);
-        
         document.getElementById("categoria").addEventListener("change", filtrarArticulos);
     }
 });
