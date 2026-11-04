@@ -47,31 +47,41 @@
 
         <div class="tarjetas-wrapper">
 
-            <div class="tarjeta">
-                <img src="../files/imagen/pugsito.jpg" alt="pugberto" class="tarjeta-img">
-                <div class="tarjeta-info">
-                    <p>A PUG 6 months<br>NAME: PUGBERTO<br>About once a day (but it requires close attention)<br>WEIGHT 3KG</p>
-                    <button class="btn-adopcion"> APPLY FOR ADOPTION </button>
-            
-                </div>
+        <div class="tarjeta" data-dog-id="pugberto" data-dog-name="PUGBERTO">
+            <span class="badge-adoptado" style="display:none;"> ADOPTADO</span>
+            <img src="../files/imagen/pugsito.jpg" alt="pugberto" class="tarjeta-img">
+            <div class="tarjeta-info">
+                <p>A PUG 6 months<br>NAME: PUGBERTO<br>About once a day (but it requires close attention)<br>WEIGHT 3KG</p>
+                <button class="btn-adopcion" data-dog="pugberto">APPLY FOR ADOPTION</button>
+                <button class="btn-toggle" data-dog="pugberto" style="display:none;">Marcar como adoptado</button>
             </div>
+        </div>
 
-            <div class="tarjeta">
+          
+                <div class="tarjeta" data-dog-id="hachiko" data-dog-name="Luis">
+                <span class="badge-adoptado" style="display: none;">ADOPTADO</span>
                 <img src="../files/imagen/havhiko.jpg" alt="hachiko" class="tarjeta-img">
                 <div class="tarjeta-info">
                     <p>A Akita Inu 6 year <br>NAME: Luis<br>EAT THREE TIMES A DAY
                         <br>weight 34 KG
                     </p>
-                    <button class="btn-adopcion">APPLY FOR ADOPTION</button>
+                    <button class="btn-adopcion" data-dog="Luis">APPLY FOR ADOPTION</button>
+                    <button class="btn-toggle" data-dog="Luis" style="display:none;">Marcar como adoptado</button>
+
                 </div>
             </div>
-            <div class="tarjeta">
+
+            
+            <div class="tarjeta" data-dog-id="pitbull" data-dog-name="brian">
+            <span class="badge-adoptado" style="display: none;">ADOPTADO</span>
                 <img src="../files/imagen/pitbull.jpg" alt="pitbull" class="tarjeta-img">
                 <div class="tarjeta-info">
                     <p>A PITBULL FRANCE 6 months <br>NAME: brian<br>About once a day (but it requires close attention)
                         <br>weight 6 KG
                     </p>
-                    <button class="btn-adopcion">APPLY FOR ADOPTION</button>
+                    <button class="btn-adopcion" data-dog="brian">APPLY FOR ADOPTION</button>
+                    <button class="btn-toggle" data-dog="brian" style="display:none;">Marcar como adoptado</button>
+
                 </div>
             </div>
 
@@ -80,6 +90,7 @@
     </div>
     </div>
 
+    <script src="../JS/adoption.js"></script>
     <script src="../JS/auth.js"></script>
 
 </body>
