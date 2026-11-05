@@ -323,11 +323,17 @@ main {
 
 aside {
     width: 25%;
-    background-color: #122c41;
+    background-color: #6e326b;
     padding: 15px;
     border-radius: 25px;
     text-align: center;
     margin: 0px;
+}
+
+aside > div {
+    align-items: center;
+    margin-top: 400px;
+    object-fit: cover;
 }
 
 section {

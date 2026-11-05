@@ -207,12 +207,19 @@ main {
 
 aside {
     width: 25%;
-    background-color: #122c41;
+    background-color: #dddddd;
     padding: 15px;
     border-radius: 25px;
     text-align: center;
     margin: 0px;
 }
+
+aside > div {
+    align-items: center;
+    margin-top: 500px;
+    object-fit: cover;
+}
+
 
 section {
     width: 75%;
