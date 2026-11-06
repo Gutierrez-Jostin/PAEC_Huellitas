@@ -401,55 +401,55 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .head { 
-        flex-direction: column; align-items: center; text-align: center; 
-    }
+    .head { flex-direction: column; align-items: center; text-align: center; }
+    .logo-bar { margin-left: 0; margin-bottom: 15px; }
+    .content-right { align-items: center; padding-right: 0; }
+    .nav-bar { justify-content: center; flex-wrap: wrap; height: auto; }
 
-    .logo-bar { 
-        margin-left: 0; margin-bottom: 15px; 
-    }
-
-    .content-right { 
-        align-items: center; padding-right: 0; 
-    }
-
-    .nav-bar { 
-        justify-content: center; flex-wrap: wrap; height: auto; 
-    }
-
-    .item { 
-        flex-direction: column; align-items: center; text-align: center; 
-    }
-
-    .article-img { 
-        width: 100%; height: auto; max-height: 200px; margin-right: 0; margin-bottom: 15px; 
-    }
-
-    .content-vet-recommend { 
+    main { 
         flex-direction: column; 
     }
 
-    .img-visualizer { 
-        width: 100%; height: auto; 
+    section { 
+        width: 100%; 
+        box-sizing: border-box;
     }
 
-    .search-nav-bar { 
-        flex-direction: column; gap: 10px; 
+    .item { flex-direction: column; align-items: center; text-align: center; }
+    .article-img { width: 100%; height: 200px; max-height: 200px; margin-right: 0; margin-bottom: 15px; }
+    .content-vet-recommend { flex-direction: column; }
+    .img-visualizer { width: 100%; height: 250px; }
+
+    .search-nav-bar { flex-direction: column; gap: 10px; width: 100%; box-sizing: border-box; }
+    .search-button, .filter-search-button { width: 100%; max-width: 350px; box-sizing: border-box; }
+
+    .form-center { flex-direction: column; align-items: flex-start; width: 100%; }
+    .form-center th, .form-center table { width: 100%; display: block; }
+    .form-center label { width: 100%; text-align: left; margin-bottom: 5px; }
+    .button-appointment-size { width: 100%; box-sizing: border-box; }
+    .button-enter-size { width: 100%; box-sizing: border-box; }
+
+    /* AQUÍ ESTÁ EL CAMBIO CLAVE PARA EL ANUNCIO */
+    aside {
+        width: 100% !important; /* Ocupa todo el ancho abajo */
+        margin-top: 30px;       /* Separación del contenido de arriba */
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
 
-    .search-button, .filter-search-button { 
-        width: 90%; 
+    aside > div {
+        margin-top: 0px !important; /* Quitamos el margen de 400px */
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .form-center { 
-        flex-direction: column; align-items: flex-start; 
-    }
-
-    .button-appointment-size { 
-        width: 90%; 
-    }
-
-    .button-enter-size { 
-        width: 90%; 
+    aside img {
+        width: 100% !important;
+        max-width: 320px; /* Tamaño máximo del anuncio */
+        height: auto !important;
+        border-radius: 15px;
     }
 }
