@@ -79,4 +79,64 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("buscador").addEventListener("keyup", filtrarArticulos);
         document.getElementById("categoria").addEventListener("change", filtrarArticulos);
     }
+
+    const btnGuardarCita = document.getElementById("btn-guardar-cita");
+    
+    if (btnGuardarCita) {
+        btnGuardarCita.addEventListener("click", async (e) => {
+            e.preventDefault();
+
+            const token = localStorage.getItem('token');
+            if (!token) {
+                alert("You must log in to schedule an appointment.");
+                return;
+            }
+
+            const telefono = document.getElementById("cita_telefono").value;
+            const mascota = document.getElementById("cita_mascota").value;
+            const especie = document.getElementById("cita_especie").value;
+            const nacimiento = document.getElementById("cita_nacimiento").value;
+            const problema = document.getElementById("cita_problema").value;
+
+            if (!telefono || !mascota || !especie || !nacimiento || !problema) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const nuevaCita = {
+                telefono: telefono,
+                mascota: mascota,
+                especie: especie,
+                nacimiento: nacimiento,
+                problema: problema
+            };
+
+            try {
+                const respuesta = await fetch('../api/save_cite.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    },
+                    body: JSON.stringify(nuevaCita)
+                });
+
+                const resultado = await respuesta.json();
+
+                if (respuesta.ok) {
+                    alert(resultado.mensaje);
+                    document.getElementById("cita_telefono").value = "";
+                    document.getElementById("cita_mascota").value = "";
+                    document.getElementById("cita_especie").value = "";
+                    document.getElementById("cita_nacimiento").value = "";
+                    document.getElementById("cita_problema").value = "";
+                } else {
+                    alert(resultado.error || "Error scheduling appointment.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Connection error. Please try again.");
+            }
+        });
+    }
 });
