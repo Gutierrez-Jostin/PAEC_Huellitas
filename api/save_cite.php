@@ -4,7 +4,19 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
 $headers = getallheaders();
-$token = isset($headers['Authorization']) ? str_replace('Bearer ', '', $headers['Authorization']) : null;
+$token = null;
+
+if (isset($headers['Authorization'])) {
+    $token = $headers['Authorization'];
+} elseif (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+    $token = $_SERVER['HTTP_AUTHORIZATION'];
+} elseif (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+    $token = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
+}
+
+if ($token) {
+    $token = str_replace('Bearer ', '', $token);
+}
 
 if (!$token) {
     http_response_code(401);
@@ -13,8 +25,14 @@ if (!$token) {
 }
 
 $datosToken = explode(':', base64_decode($token));
-$usuario_id = $datosToken[0];
+$usuario_id = $datosToken[0] ?? null;
 $usuario_email = $datosToken[1] ?? 'Unknown';
+
+if (!$usuario_id) {
+    http_response_code(401);
+    echo json_encode(["error" => "Invalid session. Please log in again."]);
+    exit;
+}
 
 $datos = json_decode(file_get_contents("php://input"), true);
 

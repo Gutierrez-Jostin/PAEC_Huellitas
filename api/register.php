@@ -19,13 +19,13 @@ if ($datos) {
         $datos['password'] = password_hash($datos['password'], PASSWORD_DEFAULT);
         
         $resultado = $coleccion->insertOne($datos);
-        echo json_encode(["mensaje" => "¡Usuario registrado con éxito!"]);
+        echo json_encode(["mensaje" => "¡User registered successfully!"]);
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(["mensaje" => "Error: " . $e->getMessage()]);
     }
 } else {
     http_response_code(400);
-    echo json_encode(["mensaje" => "No se recibieron datos"]);
+    echo json_encode(["mensaje" => "No data received"]);
 }
 ?>

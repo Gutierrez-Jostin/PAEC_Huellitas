@@ -15,13 +15,13 @@ if ($datos) {
             $token = base64_encode($usuario['_id'] . ':' . $usuario['email']);
             
             echo json_encode([
-                "mensaje" => "¡Bienvenido!", 
+                "mensaje" => "¡Welcome!", 
                 "token" => $token,
                 "nombre" => $usuario['nombre']
             ]);
         } else {
             http_response_code(401);
-            echo json_encode(["mensaje" => "Correo o contraseña incorrectos"]);
+            echo json_encode(["mensaje" => "Incorrect email or password"]);
         }
     } catch (Exception $e) {
         http_response_code(500);
@@ -29,6 +29,6 @@ if ($datos) {
     }
 } else {
     http_response_code(400);
-    echo json_encode(["mensaje" => "No se recibieron datos"]);
+    echo json_encode(["mensaje" => "No data received"]);
 }
 ?>
