@@ -195,3 +195,33 @@ footer {
     justify-content: center;
     padding: 10px 10px;
 }
+
+@media (max-width: 768px) {
+    .in-center { 
+        padding: 30px 10px; 
+    }
+
+    .login-title { 
+        font-size: 24px; 
+    }
+
+    .button-size { 
+        width: 90%; max-width: 350px; 
+    }
+
+    .button-enter-size { 
+        width: 90%; max-width: 350px; 
+    }
+
+    section { 
+        width: 100%; 
+    }
+
+    main { 
+        flex-direction: column; 
+    }
+
+    aside { 
+        width: 100%; margin-top: 20px; 
+    }
+}

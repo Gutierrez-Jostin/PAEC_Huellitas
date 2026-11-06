@@ -399,3 +399,57 @@ footer {
 .btn-logout:hover { 
     background-color: #ff4d4d;
 }
+
+@media (max-width: 768px) {
+    .head { 
+        flex-direction: column; align-items: center; text-align: center; 
+    }
+
+    .logo-bar { 
+        margin-left: 0; margin-bottom: 15px; 
+    }
+
+    .content-right { 
+        align-items: center; padding-right: 0; 
+    }
+
+    .nav-bar { 
+        justify-content: center; flex-wrap: wrap; height: auto; 
+    }
+
+    .item { 
+        flex-direction: column; align-items: center; text-align: center; 
+    }
+
+    .article-img { 
+        width: 100%; height: auto; max-height: 200px; margin-right: 0; margin-bottom: 15px; 
+    }
+
+    .content-vet-recommend { 
+        flex-direction: column; 
+    }
+
+    .img-visualizer { 
+        width: 100%; height: auto; 
+    }
+
+    .search-nav-bar { 
+        flex-direction: column; gap: 10px; 
+    }
+
+    .search-button, .filter-search-button { 
+        width: 90%; 
+    }
+
+    .form-center { 
+        flex-direction: column; align-items: flex-start; 
+    }
+
+    .button-appointment-size { 
+        width: 90%; 
+    }
+
+    .button-enter-size { 
+        width: 90%; 
+    }
+}

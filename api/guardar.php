@@ -3,7 +3,6 @@ require __DIR__ . '/conexion.php';
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-// Obtener el token del encabezado
 $headers = getallheaders();
 $token = isset($headers['Authorization']) ? str_replace('Bearer ', '', $headers['Authorization']) : null;
 

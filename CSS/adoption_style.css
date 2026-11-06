@@ -277,3 +277,29 @@ body {
 .btn-logout:hover { 
     background-color: #ff4d4d; 
 }
+
+@media (max-width: 768px) {
+    .head { 
+        flex-direction: column; align-items: center; text-align: center; 
+    }
+
+    .logo-bar { 
+        margin-left: 0; margin-bottom: 15px; 
+    }
+
+    .content-right { 
+        align-items: center; padding-right: 0; 
+    }
+
+    .nav-bar { 
+        justify-content: center; flex-wrap: wrap; height: auto; 
+    }
+
+    .tarjetas-wrapper { 
+        flex-direction: column; align-items: center; 
+    }
+
+    .tarjeta { 
+        width: 90%; max-width: 350px; 
+    }
+}
