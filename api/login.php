@@ -11,13 +11,14 @@ if ($datos) {
         $usuario = $coleccion->findOne(['email' => $datos['email']]);
 
         if ($usuario && password_verify($datos['password'], $usuario['password'])) {
-           
             $token = base64_encode($usuario['_id'] . ':' . $usuario['email']);
+            $rol = isset($usuario['rol']) ? $usuario['rol'] : 'user';
             
             echo json_encode([
-                "mensaje" => "¡Welcome!", 
+                "mensaje" => "Welcome!", 
                 "token" => $token,
-                "nombre" => $usuario['nombre']
+                "nombre" => $usuario['nombre'],
+                "rol" => $rol
             ]);
         } else {
             http_response_code(401);

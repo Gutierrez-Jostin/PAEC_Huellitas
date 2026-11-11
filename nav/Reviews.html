@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuidado Animal - Información</title>
-   
+
     <link rel="stylesheet" href="../CSS/reviews_style.css">
 </head>
+
 <body>
 
     <header class="head">
- 
+
         <div class="logo-bar">
             <img src="../files/icons/logo.png" alt="logo" class="logotype">
             <h2 class="title-logo">
@@ -19,7 +21,7 @@
         </div>
 
         <div class="content-right">
-            
+
             <div class="user-bar">
                 <a href="Login.html" class="register-buttons">Log In</a>
                 <a href="Register.html" class="register-buttons">Sign Up</a>
@@ -34,38 +36,41 @@
                 <a href="Contact.html" class="button-off">Contacts</a>
             </nav>
         </div>
-        
+
     </header>
 
-        <main> 
-            <section class="seccion-resenas">
-                <h1>Our reviews</h1>
-                <form id="form-resena" class="formulario-resena">
-                    <input type="text" id="input-usuario" placeholder="Your username (e.g. @JohnDoe)" required>
-                    <select id="select-estrellas" required>
-                        <option value="5">5 Stars - Excellent</option>
-                        <option value="4">4 Stars - Very Good</option>
-                        <option value="3">3 Stars - Good</option>
-                        <option value="2">2 Stars - Fair</option>
-                        <option value="1">1 Star - Poor</option>
-                    </select>
-                    <textarea id="input-comentario" placeholder="Write your review here..." required></textarea>
-                    <button type="submit">Submit Review</button>
-                </form>
-                <div class="fila">
+    <main>
+        <section class="seccion-resenas">
+            <h1>Our reviews</h1>
+            <form id="form-resena" class="formulario-resena">
+                <input type="text" id="input-usuario" placeholder="Your username (e.g. @JohnDoe)" required>
+                <select id="select-estrellas" required>
+                    <option value="5">5 Stars - Excellent</option>
+                    <option value="4">4 Stars - Very Good</option>
+                    <option value="3">3 Stars - Good</option>
+                    <option value="2">2 Stars - Fair</option>
+                    <option value="1">1 Star - Poor</option>
+                </select>
+                <textarea id="input-comentario" placeholder="Write your review here..." required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div class="fila">
 
-                    <div class="articulos" id="contenedor-resenas">
+                <div class="articulos" id="contenedor-resenas">
 
-                    </div>
-                    <aside class="foto-aside">
-                        <a href="https://www.instagram.com/elenitasbazar?utm_source=ig_web_button_share_sheet&mdxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="enlace-anuncio">
-                            <img src="../files/ads/elenitas-bazar.png" alt="Elenitas Bazar - Publicidad" class="img-anuncio">
-                            <p class="texto-anuncio">Ventas Bazar con buenos productos y bastante variedad</p>
-                        </a>
-                    </aside>
                 </div>
-            </section>
-        </main>
+                <aside class="foto-aside">
+                    <a href="https://www.instagram.com/elenitasbazar?utm_source=ig_web_button_share_sheet&mdxt=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener noreferrer" class="enlace-anuncio">
+                        <img src="../files/ads/elenitas-bazar.png" alt="Elenitas Bazar - Publicidad"
+                            class="img-anuncio">
+                        <p class="texto-anuncio">Ventas Bazar con buenos productos y bastante variedad</p>
+                    </a>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <div id="contenedor-admin-usuarios"></div>
 
     <hr>
 
@@ -75,7 +80,9 @@
     </footer>
 
     <script src="../JS/reviews.js"></script>
-    <script src="../JS/auth.js"></script>    
+    <script src="../JS/auth.js"></script>
+    <script src="../JS/admin.js"></script>
 
 </body>
+
 </html>
